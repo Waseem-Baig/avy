@@ -1,14 +1,15 @@
 "use client";
 
 import ResetPasswordDesktop from "@/app/(desktop)/reset-password-desktop/page";
+import ResetPasswordMobile from "@/app/(mobile)/reset-password-mobile/page";
 import { useEffect, useState } from "react";
 
-const DashBoardWrapper = () => {
+const ResetPasswordWrapper = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 500); // You can adjust the width as needed
+      setIsMobile(window.innerWidth <= 768); // You can adjust the width as needed
     };
 
     handleResize(); // Check on mount
@@ -19,7 +20,7 @@ const DashBoardWrapper = () => {
     };
   }, []);
 
-  return isMobile ? <ResetPasswordDesktop /> : <ResetPasswordDesktop />;
+  return isMobile ? <ResetPasswordMobile /> : <ResetPasswordDesktop />;
 };
 
-export default DashBoardWrapper;
+export default ResetPasswordWrapper;

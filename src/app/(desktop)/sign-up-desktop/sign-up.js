@@ -19,7 +19,7 @@ const InputField = ({ width, type, id, placeholder, label }) => {
           width === "w-[22vw]" ? "w-[28vw]" : "w-[13vw]"
         } xs:${
           width === "w-[22vw]" ? "w-[30vw]" : "w-[20vw]"
-        } md:p-[6px] sm:p-[2px] xs:p-[2px] py-2 border rounded shadow-[inset_-5px_-5px_13px_0px_#FFFFFF,_inset_3px_3px_13px_0px_#DFD6D199] placeholder:text-[#9E9E9E] placeholder:text-[12px]`}
+        } md:p-[6px] sm:p-[2px] xs:p-[2px] py-2 border-t-[3px] border-l-[3px] border-b-[1px] border-r-[1px] rounded-md shadow-[inset_-5px_-5px_13px_0px_#FFFFFF,_inset_3px_3px_13px_0px_#DFD6D199] placeholder:text-[#9E9E9E] placeholder:text-[12px]`}
         placeholder={placeholder}
       />
     </div>
@@ -52,7 +52,7 @@ export default function SignUp() {
 
   return (
     <div className="absolute inset-0 flex items-center justify-center p-4 md:top-1/2 md:left-1/4 md:transform md:-translate-y-1/2 md:-translate-x-1/2 md:w-auto md:max-w-md">
-      <div className="bg-[linear-gradient(117.14deg,_#FFFFFF_0%,_#DCEEFF_100%)] shadow-lg rounded-lg py-4 px-4 w-[28vw] h-[auto] flex flex-col justify-start items-center md:w-[28vw] sm:w-[35vw] xs:w-[40vw]">
+      <div className="bg-[#FDFEFF] shadow-lg rounded-lg py-4 px-4 w-[28vw] h-[auto] flex flex-col justify-start items-center md:w-[28vw] sm:w-[35vw] xs:w-[40vw]">
         <h1 className="text-xl font-bold text-center">Sign Up</h1>
         <form className="flex flex-col gap-1">
           <InputField

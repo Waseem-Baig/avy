@@ -49,7 +49,7 @@ export default function SignUpM() {
   };
 
   return (
-    <div className="absolute inset-0 flex items-center justify-start p-4 mt-[50vh]">
+    <div className="absolute inset-0 flex items-start justify-center p-4 mt-[40vh]">
       <div className="bg-[#FDFEFF] shadow-lg rounded-lg py-4 px-4 w-[95%] max-w-md h-auto">
         <h1 className="text-2xl font-bold text-center mb-4">Sign Up</h1>
         <form className="flex flex-col gap-1 px-[5vw]">

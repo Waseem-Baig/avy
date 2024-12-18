@@ -42,7 +42,7 @@ export default function SignINM() {
             <input
               type="email"
               id="email"
-              className="w-[full] p-2 border bg-[#F6FAFD] rounded shadow-[inset_-5px_-5px_13px_0px_#FFFFFF,_inset_3px_3px_13px_0px_#DFD6D199] placeholder:text-[#9E9E9E] placeholder:text-[12px]"
+              className="w-[full] p-2 bg-[#F6FAFD] border-t-[3px] border-l-[3px] border-b-[1px] border-r-[1px] rounded-md shadow-[inset_-5px_-5px_13px_0px_#FFFFFF,_inset_3px_3px_13px_0px_#DFD6D199] placeholder:text-[12px]"
               placeholder="Enter username / Email Id"
             />
           </div>
@@ -119,7 +119,7 @@ export default function SignINM() {
             <input
               type={showPassword ? "text" : "password"}
               id="password"
-              className="w-[100%] p-2 border rounded shadow-[inset_-5px_-5px_10px_0px_#FFFFFF,_inset_3px_3px_10px_0px_#DFD6D199] placeholder:text-[#9E9E9E] placeholder:text-[12px]"
+              className="w-[100%] p-2 border-t-[3px] border-l-[3px] border-b-[1px] border-r-[1px] rounded-md shadow-[inset_-5px_-5px_13px_0px_#FFFFFF,_inset_3px_3px_13px_0px_#DFD6D199] placeholder:text-[#9E9E9E] placeholder:text-[12px]"
               placeholder="Enter your password"
             />
             <div className="flex justify-end mt-1">

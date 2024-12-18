@@ -4,12 +4,12 @@ import OtpDesktop from "@/app/(desktop)/otp-desktop/page";
 import OtpMobile from "@/app/(mobile)/otp-mobile/page";
 import { useEffect, useState } from "react";
 
-const DashBoardWrapper = () => {
+const OtpWrapper = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 500); // You can adjust the width as needed
+      setIsMobile(window.innerWidth <= 768); // You can adjust the width as needed
     };
 
     handleResize(); // Check on mount
@@ -23,4 +23,4 @@ const DashBoardWrapper = () => {
   return isMobile ? <OtpMobile /> : <OtpDesktop />;
 };
 
-export default DashBoardWrapper;
+export default OtpWrapper;

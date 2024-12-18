@@ -39,8 +39,8 @@ const Layout = ({ children }) => {
 
       {/* Lower Half: First Image */}
       <div
-        className="relative w-full bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/image 1.png')" }}
+        className="relative min-h-[50vh] w-full bg-cover bg-center"
+        style={{ backgroundImage: "url('/images/loginmap.png')" }}
       ></div>
 
       {/* Centered Content */}

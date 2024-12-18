@@ -2,13 +2,14 @@
 
 import { useEffect, useState } from "react";
 import ForgetPasswordDesktop from "@/app/(desktop)/forget-password-desktop/page";
+import ForgetPasswordMobile from "@/app/(mobile)/forget-password-mobile/page";
 
-const DashBoardWrapper = () => {
+const ForgetPasswordWrapper = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 500); // You can adjust the width as needed
+      setIsMobile(window.innerWidth <= 768); // You can adjust the width as needed
     };
 
     handleResize(); // Check on mount
@@ -19,7 +20,7 @@ const DashBoardWrapper = () => {
     };
   }, []);
 
-  return isMobile ? <ForgetPasswordDesktop /> : <ForgetPasswordDesktop />;
+  return isMobile ? <ForgetPasswordMobile /> : <ForgetPasswordDesktop />;
 };
 
-export default DashBoardWrapper;
+export default ForgetPasswordWrapper;

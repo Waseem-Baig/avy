@@ -1,17 +1,38 @@
 "use client";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React, { useRef } from "react";
 
 const OTPInput = ({ numInputs }) => {
+  const inputRefs = useRef([]);
+
+  const handleInputChange = (e, index) => {
+    const value = e.target.value;
+    if (value.length === 1 && index < numInputs - 1) {
+      inputRefs.current[index + 1]?.focus(); // Move to the next input
+    }
+    if (value.length === 0 && index > 0) {
+      inputRefs.current[index - 1]?.focus(); // Move to the previous input if backspacing
+    }
+  };
+
+  const handleKeyDown = (e, index) => {
+    if (e.key === "Backspace" && !e.target.value && index > 0) {
+      inputRefs.current[index - 1]?.focus(); // Focus on the previous input on backspace
+    }
+  };
+
   return (
     <div className="flex space-x-2 gap-4 w-[100%]">
       {Array.from({ length: numInputs }, (_, index) => (
         <input
           key={index}
+          ref={(el) => (inputRefs.current[index] = el)} // Store input refs
           type="text"
           maxLength="1"
           className="w-[15vw] h-[7vh] p-2 border border-[#FF993333] rounded-lg shadow-[inset_-5px_-5px_13px_0px_#FFFFFF,_inset_3px_3px_13px_0px_#D1DCDF] placeholder:text-[#9E9E9E] placeholder:text-[14px] text-center"
           placeholder="0"
+          onChange={(e) => handleInputChange(e, index)}
+          onKeyDown={(e) => handleKeyDown(e, index)}
         />
       ))}
     </div>
@@ -21,9 +42,9 @@ const OTPInput = ({ numInputs }) => {
 const SignInOtpMobile = () => {
   const router = useRouter();
 
-  const handleMainPage = (e) => {
+  const handleDashboard = (e) => {
     e.preventDefault();
-    router.push("/mainPage");
+    router.push("/dashboard");
   };
 
   const handleBack = (e) => {
@@ -89,8 +110,8 @@ const SignInOtpMobile = () => {
           </div>
           <div className="flex justify-center items-center">
             <button
-              className="w-[50vw] py-2 px-8 rounded-lg [background:linear-gradient(180deg,_#ffcc99,_#e37302)] text-white text-center font-bold font-dm-sans"
-              onClick={handleMainPage}
+              className="w-[100%] py-2 px-8 rounded-lg [background:linear-gradient(180deg,_#ffcc99,_#e37302)] text-white text-center font-bold font-dm-sans"
+              onClick={handleDashboard}
             >
               Verify OTP
             </button>

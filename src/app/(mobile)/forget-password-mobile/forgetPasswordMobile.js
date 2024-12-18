@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation";
 import React from "react";
 
-const ForgetPassword = () => {
+const ForgetPasswordM = () => {
   const router = useRouter();
 
   const handleBack = (e) => {
@@ -16,8 +16,8 @@ const ForgetPassword = () => {
   };
 
   return (
-    <div className="absolute inset-0 flex items-center justify-center p-4 md:top-1/2 md:left-1/4 md:transform md:-translate-y-1/2 md:-translate-x-1/2 md:w-auto md:max-w-md">
-      <div className="bg-[#FDFEFF] shadow-lg rounded-lg p-6 w-[auto] h-[auto] flex flex-col gap-6 justify-start items-center">
+    <div className="absolute inset-0 flex items-center justify-center p-4 mt-[20vh]">
+      <div className="bg-[#FDFEFF] shadow-lg rounded-lg p-6 w-[95%] h-[auto] flex flex-col gap-6">
         <h1 className="text-2xl font-bold text-center">Forgot Password</h1>
         <div className="flex flex-col mb-4">
           <label
@@ -68,4 +68,4 @@ const ForgetPassword = () => {
   );
 };
 
-export default ForgetPassword;
+export default ForgetPasswordM;

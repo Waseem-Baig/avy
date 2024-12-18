@@ -29,7 +29,7 @@ export default function SignIN() {
 
   return (
     <div className="absolute inset-0 flex items-center justify-center p-4 md:top-1/2 md:left-1/4 md:transform md:-translate-y-1/2 md:-translate-x-1/2 md:w-auto md:max-w-md">
-      <div className="bg-[linear-gradient(117.14deg,_#FFFFFF_0%,_#DCEEFF_100%)] shadow-lg rounded-lg p-6 w-[30vw] h-[auto] flex flex-col gap-8 justify-start items-center md:w-[30vw] sm:w-[40vw] xs:w-[45vw]">
+      <div className="bg-[#FDFEFF] shadow-lg rounded-lg p-6 w-[30vw] h-[auto] flex flex-col gap-8 justify-start items-center md:w-[30vw] sm:w-[40vw] xs:w-[45vw]">
         <h1 className="text-2xl font-bold text-center">Log In</h1>
         <form className="flex flex-col gap-2">
           <div className="flex flex-col mb-4">
@@ -42,7 +42,7 @@ export default function SignIN() {
             <input
               type="email"
               id="email"
-              className="w-[22vw] p-2 border rounded shadow-[inset_-5px_-5px_13px_0px_#FFFFFF,_inset_3px_3px_13px_0px_#DFD6D199] placeholder:text-[#9E9E9E] placeholder:text-[12px] lg:w-[22vw] md:w-full sm:w-full xs:w-full"
+              className="w-[22vw] p-2 border-t-[3px] border-l-[3px] border-b-[1px] border-r-[1px] rounded-md shadow-[inset_-5px_-5px_13px_0px_#FFFFFF,_inset_3px_3px_13px_0px_#DFD6D199] placeholder:text-[#9E9E9E] placeholder:text-[12px] lg:w-[22vw] md:w-full sm:w-full xs:w-full"
               placeholder="Enter username / Email Id"
             />
           </div>
@@ -119,7 +119,7 @@ export default function SignIN() {
             <input
               type={showPassword ? "text" : "password"}
               id="password"
-              className="w-[22vw] p-2 border rounded shadow-[inset_-5px_-5px_13px_0px_#FFFFFF,_inset_3px_3px_13px_0px_#DFD6D199] placeholder:text-[#9E9E9E] placeholder:text-[12px] lg:w-[22vw] md:w-full sm:w-full xs:w-full"
+              className="w-[22vw] p-2 border-t-[3px] border-l-[3px] border-b-[1px] border-r-[1px] rounded-md shadow-[inset_-5px_-5px_13px_0px_#FFFFFF,_inset_3px_3px_13px_0px_#DFD6D199] placeholder:text-[#9E9E9E] placeholder:text-[12px] lg:w-[22vw] md:w-full sm:w-full xs:w-full"
               placeholder="Enter your password"
             />
             <div className="flex justify-end mt-1">

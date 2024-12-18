@@ -1,16 +1,52 @@
 import { useRouter } from "next/navigation";
-import React from "react";
+import React, { useRef } from "react";
 
 const OTPInput = ({ numInputs }) => {
+  const inputRefs = useRef([]);
+
+  const handleInputChange = (e, index) => {
+    const { value } = e.target;
+    if (value.length === 1) {
+      if (index < numInputs - 1) {
+        inputRefs.current[index + 1].focus();
+      }
+    }
+  };
+
+  const handleKeyDown = (e, index) => {
+    if (e.key === "Backspace" && e.target.value === "") {
+      if (index > 0) {
+        inputRefs.current[index - 1].focus();
+      }
+    }
+  };
+
+  const handlePaste = (e) => {
+    e.preventDefault();
+    const data = e.clipboardData.getData("text").split("");
+    data.forEach((char, index) => {
+      if (index < numInputs) {
+        inputRefs.current[index].value = char;
+        if (index < numInputs - 1) {
+          inputRefs.current[index + 1].focus();
+        }
+      }
+    });
+  };
+
   return (
     <div className="flex space-x-2 gap-4 md:w-[120%]">
       {Array.from({ length: numInputs }, (_, index) => (
         <input
           key={index}
+          ref={(el) => (inputRefs.current[index] = el)}
           type="text"
           maxLength="1"
           className="w-[5vw] h-[8vh] p-2 border border-[#FF993333] rounded-lg shadow-[inset_-5px_-5px_13px_0px_#FFFFFF,_inset_3px_3px_13px_0px_#D1DCDF] placeholder:text-[#9E9E9E] placeholder:text-[14px] text-center lg:w-[5vw] lg:h-[8vh] md:w-[8vw] md:h-[7vh] sm:w-[7vw] sm:h-[6vh] xs:w-[7vw] xs:h-[5vh]"
           placeholder="0"
+          onChange={(e) => handleInputChange(e, index)}
+          onKeyDown={(e) => handleKeyDown(e, index)}
+          onPaste={handlePaste}
         />
       ))}
     </div>
@@ -32,7 +68,7 @@ const SignInOtp = () => {
 
   return (
     <div className="absolute inset-0 flex items-center justify-center p-4 md:top-1/2 md:left-1/4 md:transform md:-translate-y-1/2 md:-translate-x-1/2 md:w-auto md:max-w-md">
-      <div className="bg-[linear-gradient(117.14deg,_#FFFFFF_0%,_#DCEEFF_100%)] shadow-lg rounded-lg p-6 w-[auto] h-[auto] flex flex-col gap-6 justify-start items-center">
+      <div className="bg-[#FDFEFF] shadow-lg rounded-lg p-6 w-[auto] h-[auto] flex flex-col gap-6 justify-start items-center">
         <h1 className="text-2xl font-bold text-center">Enter OTP</h1>
         <div className="flex flex-col gap-[4px] items-start">
           <label

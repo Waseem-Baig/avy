@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
-const ResetPassword = () => {
+const ResetPasswordM = () => {
   const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
   const [confirmPassword, setConfirmPassword] = useState(false);
@@ -26,8 +26,8 @@ const ResetPassword = () => {
   };
 
   return (
-    <div className="absolute inset-0 flex items-center justify-center p-4 md:top-1/2 md:left-1/4 md:transform md:-translate-y-1/2 md:-translate-x-1/2 md:w-auto md:max-w-md">
-      <div className="bg-[#FDFEFF] shadow-lg rounded-lg p-6 w-[auto] h-[auto] flex flex-col gap-6 justify-start items-center">
+    <div className="absolute inset-0 flex items-center justify-center p-4 mt-[30vh]">
+      <div className="bg-[#FDFEFF] shadow-lg rounded-lg p-6 w-[95%] h-[auto] flex flex-col gap-6 justify-start items-center">
         <h1 className="text-2xl font-bold text-center">Forgot Password</h1>
         <div className="">
           <div className="flex justify-between">
@@ -101,7 +101,7 @@ const ResetPassword = () => {
           <input
             type={showPassword ? "text" : "password"}
             id="password"
-            className="w-[22vw] p-2 border-t-[3px] border-l-[3px] border-b-[1px] border-r-[1px] rounded-md shadow-[inset_-5px_-5px_13px_0px_#FFFFFF,_inset_3px_3px_13px_0px_#DFD6D199] placeholder:text-[#9E9E9E] placeholder:text-[12px] lg:w-[22vw] md:w-full sm:w-full xs:w-full"
+            className="w-[full] p-2 border-t-[3px] border-l-[3px] border-b-[1px] border-r-[1px] rounded-md shadow-[inset_-5px_-5px_13px_0px_#FFFFFF,_inset_3px_3px_13px_0px_#DFD6D199] placeholder:text-[#9E9E9E] placeholder:text-[12px]"
             placeholder="Enter your password"
           />
         </div>
@@ -177,7 +177,7 @@ const ResetPassword = () => {
           <input
             type={confirmPassword ? "text" : "password"}
             id="c-password"
-            className="w-[22vw] p-2 border-t-[3px] border-l-[3px] border-b-[1px] border-r-[1px] rounded-md shadow-[inset_-5px_-5px_13px_0px_#FFFFFF,_inset_3px_3px_13px_0px_#DFD6D199] placeholder:text-[#9E9E9E] placeholder:text-[12px] lg:w-[22vw] md:w-full sm:w-full xs:w-full"
+            className="w-[full] p-2 border-t-[3px] border-l-[3px] border-b-[1px] border-r-[1px] rounded-md shadow-[inset_-5px_-5px_13px_0px_#FFFFFF,_inset_3px_3px_13px_0px_#DFD6D199] placeholder:text-[#9E9E9E] placeholder:text-[12px]"
             placeholder="Enter your password"
           />
         </div>
@@ -216,4 +216,4 @@ const ResetPassword = () => {
   );
 };
 
-export default ResetPassword;
+export default ResetPasswordM;

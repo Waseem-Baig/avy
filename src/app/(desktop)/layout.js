@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
       {/* First Image: Hidden on small screens, 25vw on medium and above */}
       <div
         className="hidden md:block w-[25vw] bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/image 1.png')" }}
+        style={{ backgroundImage: "url('/images/loginmap.png')" }}
       ></div>
 
       {/* Second Image: Full width on small screens, 70vw on medium and above */}
