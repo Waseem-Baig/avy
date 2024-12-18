@@ -1,3 +1,4 @@
+"use client";
 import LogoLogout from "@/components/mobileComponents/logoLogout";
 import MobileFooter from "@/components/mobileComponents/mFooter";
 import MobileNavbar from "@/components/mobileComponents/mNavbar";
