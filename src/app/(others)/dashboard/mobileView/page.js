@@ -3,7 +3,7 @@ import DashBoardM from "./dashboardMobile";
 
 const DashBoardMobile = () => {
   return (
-    <div className="flex bg-[#EEF5FC] p-4 flex-col gap-[5vh] w-screen h-screen">
+    <div className="flex bg-[#EEF5FC] flex-col gap-[5vh]">
       <DashBoardM />
     </div>
   );

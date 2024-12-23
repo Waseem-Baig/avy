@@ -5,7 +5,7 @@ import DashBoardD from "./dashboardPage";
 
 const DashBoardDesktop = () => {
   return (
-    <div className="bg-[#EEF5FC] w-[100vw] h-auto flex flex-col gap-[5vh] overflow-x-hidden">
+    <div className="bg-[#EEF5FC] flex flex-col gap-[5vh] overflow-x-hidden">
       <Navbar />
       <DashBoardD />
       <Footer />

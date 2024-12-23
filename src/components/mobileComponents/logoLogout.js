@@ -1,12 +1,24 @@
+"use client";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const LogoLogout = () => {
+  const router = useRouter();
+
+  const handleLogout = (e) => {
+    e.preventDefault();
+    router.push("/sign-in");
+  };
+
   return (
-    <div className="flex justify-between w-full">
-      <div className="bg-[#FDFEFF] [box-shadow:-11.52px_-11.52px_11.52px_0px_#AEAEC040_inset,11.52px_11.52px_11.52px_0px_#FFFFFF_inset,-11.52px_-11.52px_10px_0px_#FFFFFF,11.52px_11.52px_10px_0px_#AEAEC04D] w-[25vw] py-2 flex justify-center items-center rounded-md">
-        <Image alt="logo" src={"/images/logo.png"} width={75} height={40} />
+    <div className="flex justify-between w-[90%]">
+      <div className="bg-[#F8FEFF] shadow-[-11.52px_-11.52px_34.55px_0px_#FFFFFF,_11.52px_11.52px_34.55px_0px_rgba(174,174,192,0.3),-11.52px_-11.52px_11.52px_0px_rgba(174,174,192,0.25)_inset,11.52px_11.52px_11.52px_0px_#FFFFFF_inset] w-[auto] py-2 px-4 flex justify-center items-center rounded-md border-[#FBE7D4]">
+        <Image alt="logo" src={"/images/logo.png"} width={85} height={40} />
       </div>
-      <button className="bg-[#FDFEFF] [box-shadow:-10px_-10px_10px_0px_#FFFFFF,10px_10px_10px_0px_#AEAEC04D,-10px_-10px_10px_0px_#AEAEC040_inset,10px_10px_10px_0px_#FFFFFF_inset] w-[13vw] py-1 flex flex-col justify-center items-center border-solid border-[1px] border-[#FBE7D4] rounded-md">
+      <button
+        className="bg-[#FDFEFF] shadow-[-10px_-10px_30px_0px_#FFFFFF,_10px_10px_30px_0px_rgba(174,174,192,0.3),-5px_-5px_10px_0px_rgba(174,174,192,0.25)_inset,5px_5px_10px_0px_#FFFFFF_inset] w-[14vw] px-2 flex flex-col justify-center items-center border-solid border-[1px] border-[#FBE7D4] rounded-md"
+        onClick={handleLogout}
+      >
         <Image
           alt="logout"
           src={"/svgs/ic_outline-logout.svg"}

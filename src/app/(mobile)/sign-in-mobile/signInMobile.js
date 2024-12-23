@@ -28,9 +28,9 @@ export default function SignINM() {
   };
 
   return (
-    <div className="absolute inset-0 flex items-center justify-center p-4 mt-[20vh]">
+    <div className="absolute inset-0 flex items-start justify-center p-4 mt-[40vh]">
       <div className="bg-[#FDFEFF] shadow-lg rounded-lg p-6 w-[95%] ">
-        <h1 className="text-2xl font-bold text-center">Log In</h1>
+        <h1 className="text-2xl font-bold text-center text-black">Log In</h1>
         <form className="flex flex-col gap-2">
           <div className="flex flex-col mb-4">
             <label
@@ -42,7 +42,7 @@ export default function SignINM() {
             <input
               type="email"
               id="email"
-              className="w-[full] p-2 bg-[#F6FAFD] border-t-[3px] border-l-[3px] border-b-[1px] border-r-[1px] rounded-md shadow-[inset_-5px_-5px_13px_0px_#FFFFFF,_inset_3px_3px_13px_0px_#DFD6D199] placeholder:text-[12px]"
+              className="w-[full] p-2 bg-[#F6FAFD] border-t-[3px] border-l-[3px] border-b-[1px] border-r-[1px] rounded-md shadow-[inset_-5px_-5px_13px_0px_#FFFFFF,_inset_3px_3px_13px_0px_#DFD6D199] placeholder:text-[12px] text-black"
               placeholder="Enter username / Email Id"
             />
           </div>
@@ -119,7 +119,7 @@ export default function SignINM() {
             <input
               type={showPassword ? "text" : "password"}
               id="password"
-              className="w-[100%] p-2 border-t-[3px] border-l-[3px] border-b-[1px] border-r-[1px] rounded-md shadow-[inset_-5px_-5px_13px_0px_#FFFFFF,_inset_3px_3px_13px_0px_#DFD6D199] placeholder:text-[#9E9E9E] placeholder:text-[12px]"
+              className="w-[100%] p-2 border-t-[3px] border-l-[3px] border-b-[1px] border-r-[1px] rounded-md shadow-[inset_-5px_-5px_13px_0px_#FFFFFF,_inset_3px_3px_13px_0px_#DFD6D199] placeholder:text-[#9E9E9E] placeholder:text-[12px] text-black"
               placeholder="Enter your password"
             />
             <div className="flex justify-end mt-1">
@@ -140,10 +140,12 @@ export default function SignINM() {
             Login
           </button>
         </form>
-        <div className=" flex gap-1 mt-4 justify-center">
-          <p className="font-dm-sans text-[14px]">Don’t have an account?</p>
+        <div className=" flex gap-1 mt-4 justify-center items-center">
+          <p className="font-dm-sans text-[14px] text-black">
+            Don’t have an account?
+          </p>
           <button
-            className="text-blue-700 text-[14px] lg:text-[14px] md:text-[12px] sm:text-[10px] xs:text-[10px]"
+            className="text-blue-500 text-[1rem] font-dm-sans "
             onClick={handleSignUp}
           >
             Sign Up

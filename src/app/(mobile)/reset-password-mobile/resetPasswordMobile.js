@@ -26,11 +26,13 @@ const ResetPasswordM = () => {
   };
 
   return (
-    <div className="absolute inset-0 flex items-center justify-center p-4 mt-[30vh]">
-      <div className="bg-[#FDFEFF] shadow-lg rounded-lg p-6 w-[95%] h-[auto] flex flex-col gap-6 justify-start items-center">
-        <h1 className="text-2xl font-bold text-center">Forgot Password</h1>
+    <div className="absolute inset-0 flex items-start justify-center p-4 mt-[35vh] w-[full]">
+      <div className="bg-[#FDFEFF] shadow-lg rounded-lg p-6 w-[100%] h-[auto] flex flex-col gap-6">
+        <h1 className="text-2xl font-bold text-center text-black">
+          Forgot Password
+        </h1>
         <div className="">
-          <div className="flex justify-between">
+          <div className="flex justify-between w-full items-start">
             <label
               className="block text-black font-bold mb-1 font-dm-sans text-[14px]"
               htmlFor="password"
@@ -101,7 +103,7 @@ const ResetPasswordM = () => {
           <input
             type={showPassword ? "text" : "password"}
             id="password"
-            className="w-[full] p-2 border-t-[3px] border-l-[3px] border-b-[1px] border-r-[1px] rounded-md shadow-[inset_-5px_-5px_13px_0px_#FFFFFF,_inset_3px_3px_13px_0px_#DFD6D199] placeholder:text-[#9E9E9E] placeholder:text-[12px]"
+            className="w-[100%] p-2 border-t-[3px] border-l-[3px] border-b-[1px] border-r-[1px] rounded-md shadow-[inset_-5px_-5px_13px_0px_#FFFFFF,_inset_3px_3px_13px_0px_#DFD6D199] placeholder:text-[#9E9E9E] placeholder:text-[12px] text-black"
             placeholder="Enter your password"
           />
         </div>
@@ -177,7 +179,7 @@ const ResetPasswordM = () => {
           <input
             type={confirmPassword ? "text" : "password"}
             id="c-password"
-            className="w-[full] p-2 border-t-[3px] border-l-[3px] border-b-[1px] border-r-[1px] rounded-md shadow-[inset_-5px_-5px_13px_0px_#FFFFFF,_inset_3px_3px_13px_0px_#DFD6D199] placeholder:text-[#9E9E9E] placeholder:text-[12px]"
+            className="w-[100%] p-2 border-t-[3px] border-l-[3px] border-b-[1px] border-r-[1px] rounded-md shadow-[inset_-5px_-5px_13px_0px_#FFFFFF,_inset_3px_3px_13px_0px_#DFD6D199] placeholder:text-[#9E9E9E] placeholder:text-[12px] text-black"
             placeholder="Enter your password"
           />
         </div>
@@ -199,7 +201,7 @@ const ResetPasswordM = () => {
                   />
                 </g>
               </svg>
-              <span className="font-poppins font-medium">Back</span>
+              <span className="font-poppins font-medium text-black">Back</span>
             </button>
           </div>
           <div className="flex justify-center items-center">

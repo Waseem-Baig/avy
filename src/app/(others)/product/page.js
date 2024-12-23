@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import DashBoardMobile from "./mobileView/dashboardMobile";
-import DashBoardDesktop from "./desktopView/page";
+import ProductDesktop from "./desktopView/page";
+import ProductMobile from "./mobileView/page";
 
-const DashBoardWrapper = () => {
+const ProductWrapper = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const DashBoardWrapper = () => {
     };
   }, []);
 
-  return isMobile ? <DashBoardMobile /> : <DashBoardDesktop />;
+  return isMobile ? <ProductMobile /> : <ProductDesktop />;
 };
 
-export default DashBoardWrapper;
+export default ProductWrapper;

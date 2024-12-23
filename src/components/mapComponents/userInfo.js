@@ -7,7 +7,7 @@ const UserInfo = ({ data, isOpen, onToggle, showTimeLine, handleTimeLine }) => {
     <div className="relative w-[90%]">
       {/* Background Overlay */}
       <div
-        className={`bg-white w-full h-auto p-2 ${
+        className={`bg-white w-full h-auto p-4 ${
           isOpen ? "cursor-default" : "cursor-pointer"
         }`}
         onClick={onToggle}
@@ -15,17 +15,17 @@ const UserInfo = ({ data, isOpen, onToggle, showTimeLine, handleTimeLine }) => {
         {!isOpen ? (
           <div className="flex justify-between">
             <div className="gap-[1px]">
-              <p className="text-black font-source-sans text-[8px] font-extralight">
+              <p className="text-black font-source-sans text-[12px] font-extralight">
                 {data.name}
               </p>
-              <p className="text-black font-source-sans text-[8px] font-extralight">
+              <p className="text-black font-source-sans text-[12px] font-extralight">
                 {data.registration_number}
               </p>
               <div className="flex">
-                <label className="text-[#9E9E9E] font-source-sans text-[8px] font-extralight">
+                <label className="text-[#9E9E9E] font-source-sans text-[12px] font-extralight">
                   IMEI:
                 </label>
-                <p className="text-black font-source-sans text-[8px] font-extralight">
+                <p className="text-black font-source-sans text-[12px] font-extralight">
                   #{data.imei}
                 </p>
               </div>

@@ -16,9 +16,11 @@ const ForgetPasswordM = () => {
   };
 
   return (
-    <div className="absolute inset-0 flex items-center justify-center p-4 mt-[20vh]">
+    <div className="absolute inset-0 flex items-start justify-center p-4 mt-[40vh]">
       <div className="bg-[#FDFEFF] shadow-lg rounded-lg p-6 w-[95%] h-[auto] flex flex-col gap-6">
-        <h1 className="text-2xl font-bold text-center">Forgot Password</h1>
+        <h1 className="text-2xl font-bold text-center text-black">
+          Forgot Password
+        </h1>
         <div className="flex flex-col mb-4">
           <label
             className="block text-black font-bold mb-1 text-[14px] font-dm-sans"
@@ -29,7 +31,7 @@ const ForgetPasswordM = () => {
           <input
             type="email"
             id="email"
-            className="w-[22vw] p-2 border-t-[3px] border-l-[3px] border-b-[1px] border-r-[1px] rounded-md shadow-[inset_-5px_-5px_13px_0px_#FFFFFF,_inset_3px_3px_13px_0px_#DFD6D199] placeholder:text-[#9E9E9E] placeholder:text-[12px] lg:w-[22vw] md:w-full sm:w-full xs:w-full"
+            className="w-[22vw] p-2 border-t-[3px] border-l-[3px] border-b-[1px] border-r-[1px] rounded-md shadow-[inset_-5px_-5px_13px_0px_#FFFFFF,_inset_3px_3px_13px_0px_#DFD6D199] placeholder:text-[#9E9E9E] placeholder:text-[12px] lg:w-[22vw] md:w-full sm:w-full xs:w-full text-black"
             placeholder="Enter username / Email Id"
           />
         </div>
@@ -51,7 +53,7 @@ const ForgetPasswordM = () => {
                   />
                 </g>
               </svg>
-              <span className="font-poppins font-medium">Back</span>
+              <span className="font-poppins font-medium text-black">Back</span>
             </button>
           </div>
           <div className="flex justify-center items-center">

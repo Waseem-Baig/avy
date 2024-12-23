@@ -1,16 +1,12 @@
 "use client";
 
 import React from "react";
-import SignIN from "./(desktop)/sign-in-desktop/signIn";
-import Layout from "./(desktop)/layout";
-import Test from "../components/mapComponents/text";
+import SignInWrapper from "./(auth)/sign-in/page";
 
 const Page = () => {
   return (
     <div>
-      <Layout>
-        <SignIN />
-      </Layout>
+      <SignInWrapper />
     </div>
   );
 };

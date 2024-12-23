@@ -8,21 +8,21 @@ const Navbar = () => {
           <Image alt="logo" src="/images/logo.png" width={100} height={10} />
         </div>
         <div className="flex gap-3 text-center items-center pr-[3vw]">
-          <p className="font-sans font-light text-[14px]">
-            Hi,
+          <p className="font-sans font-light text-[16px]">
+            Hi,{" "}
             <span className="font-sans font-semibold">
               Delhi Public School{" "}
             </span>
           </p>
-          <p className="font-sans font-light text-[14px] text-[#6C6C6C]">
+          <p className="font-sans font-light text-[16px] text-[#6C6C6C]">
             User Type :{" "}
-            <span className="font-sans font-semibold text-[14px] text-black">
+            <span className="font-sans font-semibold text-[16px] text-black">
               Organization
             </span>
           </p>
-          <p className="font-sans font-light text-[14px] text-[#6C6C6C]">
+          <p className="font-sans font-light text-[16px] text-[#6C6C6C]">
             Account ID :
-            <span className="font-sans font-semibold text-[14px] text-black">
+            <span className="font-sans font-semibold text-[16px] text-black">
               #1432
             </span>
           </p>

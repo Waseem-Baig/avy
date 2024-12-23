@@ -29,7 +29,7 @@ const OTPInput = ({ numInputs }) => {
           ref={(el) => (inputRefs.current[index] = el)} // Store input refs
           type="text"
           maxLength="1"
-          className="w-[15vw] h-[7vh] p-2 border border-[#FF993333] rounded-lg shadow-[inset_-5px_-5px_13px_0px_#FFFFFF,_inset_3px_3px_13px_0px_#D1DCDF] placeholder:text-[#9E9E9E] placeholder:text-[14px] text-center"
+          className="w-[15vw] h-[7vh] p-2 border border-[#FF993333] rounded-lg shadow-[inset_-5px_-5px_13px_0px_#FFFFFF,_inset_3px_3px_13px_0px_#D1DCDF] placeholder:text-[#9E9E9E] placeholder:text-[14px] text-center text-black"
           placeholder="0"
           onChange={(e) => handleInputChange(e, index)}
           onKeyDown={(e) => handleKeyDown(e, index)}
@@ -53,9 +53,9 @@ const SignInOtpMobile = () => {
   };
 
   return (
-    <div className="absolute inset-0 flex items-center justify-center p-4 mt-[20vh]">
+    <div className="absolute inset-0 flex items-start justify-center p-4 mt-[35vh]">
       <div className="bg-[#FDFEFF] shadow-lg rounded-lg p-6 w-[95%] h-[auto] flex flex-col gap-6 justify-start items-center">
-        <h1 className="text-2xl font-bold text-center">Enter OTP</h1>
+        <h1 className="text-2xl font-bold text-center text-black">Enter OTP</h1>
         <div className="flex flex-col gap-2 items-start">
           <label
             className="block text-black font-bold text-[16px] font-dm-sans"
@@ -63,7 +63,7 @@ const SignInOtpMobile = () => {
           >
             Enter OTP sent to Email Id
           </label>
-          <label className="text-[12px]">
+          <label className="text-[12px] text-black">
             OTP Sent to sri**********@gmail.com{"  "}
             <span>
               <button className="text-[#0060FF] font-bold">Resend</button>
@@ -79,7 +79,7 @@ const SignInOtpMobile = () => {
           >
             Enter OTP sent to Mobile No
           </label>
-          <label className="text-[12px]">
+          <label className="text-[12px] text-black">
             OTP Sent to +91 93 ** *** * * 13{" "}
             <span>
               <button className="text-[#0060FF] font-bold">Resend</button>
@@ -105,7 +105,7 @@ const SignInOtpMobile = () => {
                   />
                 </g>
               </svg>
-              <span className="font-poppins font-medium">Back</span>
+              <span className="font-poppins font-medium text-black">Back</span>
             </button>
           </div>
           <div className="flex justify-center items-center">

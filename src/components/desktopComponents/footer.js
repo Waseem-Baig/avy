@@ -9,34 +9,46 @@ const Footer = () => {
           <h3 className="text-[#002E5B] font-semibold font-dm-sans">
             Reach us out
           </h3>
-          <p className="font-dm-sans text-[14px]">
+          <p className="font-dm-sans text-[14px] text-black">
             Email : avypvtltd@gmail.com
           </p>
-          <p className="font-dm-sans text-[14px]">Phone : +91 99999 99999</p>
-          <p className="font-dm-sans text-[14px]">Phone : +91 99999 99999</p>
-          <p className="font-dm-sans text-[14px]">website : www.avy.com</p>
+          <p className="font-dm-sans text-[14px] text-black">
+            Phone : +91 99999 99999
+          </p>
+          <p className="font-dm-sans text-[14px] text-black">
+            Phone : +91 99999 99999
+          </p>
+          <p className="font-dm-sans text-[14px] text-black">
+            website : www.avy.com
+          </p>
         </div>
         <div className="flex flex-col gap-2">
           <h3 className="text-[#002E5B] font-semibold font-dm-sans">
             Our Address
           </h3>
-          <p className="font-dm-sans text-[14px]">Avy private limited</p>
-          <p className="font-dm-sans text-[14px]">
+          <p className="font-dm-sans text-[14px] text-black">
+            Avy private limited
+          </p>
+          <p className="font-dm-sans text-[14px] text-black">
             flat no : 31-2, 22nd floor, Mindspace
           </p>
-          <p className="font-dm-sans text-[14px]">
+          <p className="font-dm-sans text-[14px] text-black">
             Mindspace junction, hitec city
           </p>
-          <p className="font-dm-sans text-[14px]">Hyderabad, telangana</p>
+          <p className="font-dm-sans text-[14px] text-black">
+            Hyderabad, telangana
+          </p>
         </div>
       </div>
       <div className="flex justify-start items-center gap-[10vw]">
         <Image alt="logo" src={"/images/logo.png"} width={120} height={60} />
-        <h1 className="font-dm-sans text-[2rem] font-bold">AVY Pvt. Ltd.</h1>
+        <h1 className="font-dm-sans text-[2rem] font-bold text-[#002E5B]">
+          AVY Pvt. Ltd.
+        </h1>
       </div>
       <hr className="w-[95%] border-t-2 border-[#A2A2A2]" />
       <div className="flex justify-between items-center pb-[2vh]">
-        <p className="font-dm-sans text-[1rem]">
+        <p className="font-dm-sans text-[1rem] text-black">
           2024 AVY pvt ltd. All rights reserved
         </p>
         <div className="flex items-center gap-3 pr-[5vw] ">

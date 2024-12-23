@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const MobileCard1 = ({ title, text, icon, width, height }) => {
   return (
-    <div className="bg-[#EEF5FC] relative w-[100%] h-[15vh] shadow-[-10px_-10px_10px_#fff,_8px_8px_10px_#00000033] rounded-xl border-#D4E5F6 border-[1px] border-solid box-border cursor-pointer ">
+    <div className="bg-[#EEF5FC] relative w-[78vw] h-[15vh] shadow-[-10px_-10px_10px_#fff,_8px_8px_10px_#00000033] rounded-xl border-#D4E5F6 border-[1px] border-solid box-border cursor-pointer ">
       {/* Inner Orange Border (Top-Left Only) */}
       <div className="w-[30vw] h-[8vh] border-l-[#EA8826] border-t-[#EA8826] border-solid rounded-tl-xl border-l-[2px] border-t-[2px]"></div>
 

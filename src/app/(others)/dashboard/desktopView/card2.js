@@ -2,10 +2,9 @@ import React from "react";
 import Image from "next/image";
 import "/src/app/globals.css";
 
-const Card2 = ({ id, text, icon, width, height, isSelected, onClick }) => {
+const Card2 = ({ id, text, icon, width, height, isSelected }) => {
   return (
     <div
-      onClick={() => onClick(id)} // Call the click handler with card id
       className={`relative bg-gradient-to-b from-[#FFFFFF] to-[#DCEEFF] w-[21vw] h-[9vh] rounded-md cursor-pointer transition-all 
       card2-shadow ${
         isSelected ? "border-[#002E5B] border-solid border-[2px]" : ""

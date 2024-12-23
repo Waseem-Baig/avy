@@ -17,10 +17,12 @@ const Card1 = ({ title, text, icon, width, height }) => {
 
       {/* Text Centered Inside the Card */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-        <h2 className="font-poppins text-[2rem] text-[#267CD1] font-semibold">
+        <h2 className="font-poppins text-[2rem] text-[#267CD1] font-bold">
           {title}
         </h2>
-        <p className="text-[#267CD1] text-[1.2rem] font-poppins">{text}</p>
+        <p className="text-[#267CD1] text-[1.2rem] font-poppins font-semibold">
+          {text}
+        </p>
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+"use client";
 import { useRouter } from "next/navigation";
 import React, { useRef } from "react";
 
@@ -42,7 +43,7 @@ const OTPInput = ({ numInputs }) => {
           ref={(el) => (inputRefs.current[index] = el)}
           type="text"
           maxLength="1"
-          className="w-[5vw] h-[8vh] p-2 border border-[#FF993333] rounded-lg shadow-[inset_-5px_-5px_13px_0px_#FFFFFF,_inset_3px_3px_13px_0px_#D1DCDF] placeholder:text-[#9E9E9E] placeholder:text-[14px] text-center lg:w-[5vw] lg:h-[8vh] md:w-[8vw] md:h-[7vh] sm:w-[7vw] sm:h-[6vh] xs:w-[7vw] xs:h-[5vh]"
+          className="w-[5vw] h-[8vh] p-2 border border-[#FF993333] rounded-lg shadow-[inset_-5px_-5px_13px_0px_#FFFFFF,_inset_3px_3px_13px_0px_#D1DCDF] placeholder:text-[#9E9E9E] placeholder:text-[14px] text-center lg:w-[5vw] lg:h-[8vh] md:w-[8vw] md:h-[7vh] sm:w-[7vw] sm:h-[6vh] xs:w-[7vw] xs:h-[5vh] text-black"
           placeholder="0"
           onChange={(e) => handleInputChange(e, index)}
           onKeyDown={(e) => handleKeyDown(e, index)}
@@ -69,7 +70,7 @@ const SignInOtp = () => {
   return (
     <div className="absolute inset-0 flex items-center justify-center p-4 md:top-1/2 md:left-1/4 md:transform md:-translate-y-1/2 md:-translate-x-1/2 md:w-auto md:max-w-md">
       <div className="bg-[#FDFEFF] shadow-lg rounded-lg p-6 w-[auto] h-[auto] flex flex-col gap-6 justify-start items-center">
-        <h1 className="text-2xl font-bold text-center">Enter OTP</h1>
+        <h1 className="text-2xl font-bold text-center text-black">Enter OTP</h1>
         <div className="flex flex-col gap-[4px] items-start">
           <label
             className="block text-black font-bold text-[16px] font-dm-sans"
@@ -77,7 +78,7 @@ const SignInOtp = () => {
           >
             Enter OTP sent to Email Id
           </label>
-          <label className="text-[12px]">
+          <label className="text-[12px] text-black">
             OTP Sent to sri**********@gmail.com{"  "}
             <span>
               <button className="text-[#0060FF] font-bold">Resend</button>
@@ -93,7 +94,7 @@ const SignInOtp = () => {
           >
             Enter OTP sent to Mobile No
           </label>
-          <label className="text-[12px]">
+          <label className="text-[12px] text-black">
             OTP Sent to +91 93 ** *** * * 13{" "}
             <span>
               <button className="text-[#0060FF] font-bold">Resend</button>
@@ -119,7 +120,7 @@ const SignInOtp = () => {
                   />
                 </g>
               </svg>
-              <span className="font-poppins font-medium">Back</span>
+              <span className="font-poppins font-medium text-black">Back</span>
             </button>
           </div>
           <div className="flex justify-center items-center">

@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import DashBoardMobile from "./mobileView/dashboardMobile";
-import DashBoardDesktop from "./desktopView/page";
+import ChangePasswordDesktop from "./desktopView/page";
+import ChangePasswordMobile from "./mobileView/page";
 
-const DashBoardWrapper = () => {
+const ChangePasswordWrapper = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const DashBoardWrapper = () => {
     };
   }, []);
 
-  return isMobile ? <DashBoardMobile /> : <DashBoardDesktop />;
+  return isMobile ? <ChangePasswordMobile /> : <ChangePasswordDesktop />;
 };
 
-export default DashBoardWrapper;
+export default ChangePasswordWrapper;
