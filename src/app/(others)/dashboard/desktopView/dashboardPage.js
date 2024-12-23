@@ -51,7 +51,7 @@ const DashBoardD = () => {
               id={1}
               title={"Vahi"}
               text={"Vehicle tracking device"}
-              icon={"/svgs/vector1.svg"}
+              icon={"/svgs/Vector1.svg"}
               width={20}
               height={20}
               isSelected={selectedCard1 === 1}
@@ -64,7 +64,7 @@ const DashBoardD = () => {
               id={2}
               title={"TagIT"}
               text={"Nearby bluetooth tracker"}
-              icon={"/svgs/shape.svg"}
+              icon={"/svgs/Shape.svg"}
               width={30}
               height={30}
               isSelected={selectedCard1 === 2}
