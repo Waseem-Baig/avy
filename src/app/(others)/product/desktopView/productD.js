@@ -99,7 +99,7 @@ const ProductD = () => {
           {getVisibleButtons().map((page) => (
             <button
               key={page}
-              className={`w-[4vw] h-[8vh] shadow-[inset_10px_10px_30px_#fff,_inset_-10px_-10px_30px_#AEAEC04D] rounded-md border-#D4E5F6 border-[1px] lg:w-[4vw] lg:h-[8vh] md:w-[5vw] md:h-[7vh] text-black ${
+              className={`w-[4vw] h-[8vh] shadow-[inset_10px_10px_30px_#fff,_inset_-10px_-10px_30px_#AEAEC04D] rounded-md border-[#D4E5F6] border-[1px] lg:w-[4vw] lg:h-[8vh] md:w-[5vw] md:h-[7vh] text-black ${
                 page === currentPage
                   ? "bg-gradient-to-b from-[#FFCC99] to-[#E37302] text-white"
                   : "bg-[#F8FEFF]"

@@ -2,7 +2,7 @@ import React from "react";
 
 const TermsM = () => {
   return (
-    <div className="flex justify-center pl-[5vw] pr-[5vw] mb-[15vh]">
+    <div className="flex justify-center pl-[5vw] pr-[5vw] mb-[5vh]">
       <div className="bg-[#EEF5FC] relative w-[90vw] h-auto shadow-[10px_10px_30px_0px_rgba(174,174,192,0.4),_-10px_-10px_30px_0px_#FFFFFF] rounded-xl flex flex-col py-4 px-4 font-dm-sans">
         <h1 className="text-[#002E5B] font-dm-sans font-bold text-center pt-[4vh] text-[1.5rem] mb-4">
           Terms & Conditions

@@ -40,14 +40,14 @@ const ProductM = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center w-full pt-1 px-4 gap-[5vh] mb-[15vh]">
+    <div className="flex flex-col justify-center items-center w-full pt-1 px-4 gap-[5vh] mb-[5vh]">
       <div className="flex justify-center items-center w-full h-[27vh] rounded-lg bg-[#EEF5FC] shadow-[inset_-10px_-10px_10px_0px_#AEAEC040,_inset_10px_10px_10px_0px_#FFFFFF,_10px_10px_30px_0px_#AEAEC04D,_-10px_-10px_30px_0px_#FFFFFF]">
         <div className="flex flex-col justify-center items-center gap-3">
           <h2 className="font-sans font-semibold text-[1.7rem] text-[#002E5B]">
             Devices
           </h2>
           <div className="flex justify-center items-center gap-3 p-4">
-            <div className="flex flex-col justify-center items-center border-[#FBE7D4] border-[1px] bg-[#FDFEFF] w-[28vw] px-6 py-1 shadow-[-2px_-2px_13px_0px_#FFFFFF_inset,_1px_1px_13px_0px_#D1DCDF_inset]">
+            <div className="flex flex-col justify-center items-center border-[#FBE7D4] border-[1px] bg-[#FDFEFF] w-[25vw] px-6 py-1 shadow-[-2px_-2px_13px_0px_#FFFFFF_inset,_1px_1px_13px_0px_#D1DCDF_inset]">
               <p className="text-[16px] text-[#035EB8] text-center font-sans">
                 Total Devices
               </p>
@@ -55,7 +55,7 @@ const ProductM = () => {
                 {data.length}
               </p>
             </div>
-            <div className="flex flex-col justify-center items-center border-[#FBE7D4] border-[1px] bg-[#FDFEFF] w-[28vw] px-6 py-1 shadow-[-2px_-2px_13px_0px_#FFFFFF_inset,_1px_1px_13px_0px_#D1DCDF_inset]">
+            <div className="flex flex-col justify-center items-center border-[#FBE7D4] border-[1px] bg-[#FDFEFF] w-[25vw] px-6 py-1 shadow-[-2px_-2px_13px_0px_#FFFFFF_inset,_1px_1px_13px_0px_#D1DCDF_inset]">
               <p className="text-[16px] text-[#035EB8] text-center font-sans">
                 Inactive Devices
               </p>
@@ -63,7 +63,7 @@ const ProductM = () => {
                 {data.filter((item) => item.status === "Inactive").length}
               </p>
             </div>
-            <div className="flex flex-col justify-center items-center border-[#FBE7D4] border-[1px] bg-[#FDFEFF] w-[28vw] px-6 py-1 shadow-[-2px_-2px_13px_0px_#FFFFFF_inset,_1px_1px_13px_0px_#D1DCDF_inset]">
+            <div className="flex flex-col justify-center items-center border-[#FBE7D4] border-[1px] bg-[#FDFEFF] w-[25vw] px-6 py-1 shadow-[-2px_-2px_13px_0px_#FFFFFF_inset,_1px_1px_13px_0px_#D1DCDF_inset]">
               <p className="text-[16px] text-[#035EB8] text-center font-sans">
                 Active Devices
               </p>
@@ -93,7 +93,7 @@ const ProductM = () => {
         <div className="flex justify-center items-center gap-4 mt-4">
           {/* Left Arrow */}
           <button
-            className={`w-[12vw] h-[6vh] rounded-md bg-[#EEF5FC] border-[1px] text-black ${
+            className={`w-[10vw] h-[5vh] shadow-[inset_10px_10px_30px_#fff,_inset_-10px_-10px_30px_#AEAEC04D] rounded-md bg-[#F8FEFF] border-#D4E5F6 border-[1px] text-black ${
               currentPage === 1 ? "opacity-50 pointer-events-none" : ""
             }`}
             onClick={() => handlePageChange(currentPage - 1)}
@@ -105,7 +105,7 @@ const ProductM = () => {
           {getVisibleButtons().map((page) => (
             <button
               key={page}
-              className={`w-[12vw] h-[6vh] rounded-md border-[1px] text-black ${
+              className={`w-[12vw] h-[6vh] shadow-[inset_10px_10px_30px_#fff,_inset_-10px_-10px_30px_#AEAEC04D] rounded-md border-[#D4E5F6] border-[1px] text-black ${
                 page === currentPage
                   ? "bg-gradient-to-b from-[#FFCC99] to-[#E37302] text-white"
                   : "bg-[#EEF5FC]"
@@ -118,7 +118,7 @@ const ProductM = () => {
 
           {/* Right Arrow */}
           <button
-            className={`w-[12vw] h-[6vh] rounded-md bg-[#EEF5FC] border-[1px] text-black ${
+            className={`w-[10vw] h-[5vh] shadow-[inset_10px_10px_30px_#fff,_inset_-10px_-10px_30px_#AEAEC04D] rounded-md bg-[#F8FEFF] border-#D4E5F6 border-[1px] text-black ${
               currentPage === totalPages ? "opacity-50 pointer-events-none" : ""
             }`}
             onClick={() => handlePageChange(currentPage + 1)}

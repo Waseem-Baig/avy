@@ -35,8 +35,8 @@ const ProfileM = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center pl-[5vw] pr-[5vw] mb-[15vh]">
-      <div className="bg-[#EEF5FC] relative w-[90vw] h-auto shadow-[inset_-10px_-10px_10px_0px_#AEAEC040,_inset_10px_10px_10px_0px_#FFFFFF,_10px_10px_30px_0px_#AEAEC04D,_-10px_-10px_30px_0px_#FFFFFF] rounded-xl flex flex-col py-4 px-6 font-dm-sans mb-[5vh]">
+    <div className="flex flex-col justify-center pl-[5vw] pr-[5vw] mb-[5vh]">
+      <div className="bg-[#EEF5FC] relative w-[90vw] h-auto shadow-[inset_-10px_-10px_10px_0px_#AEAEC040,_inset_10px_10px_10px_0px_#FFFFFF,_10px_10px_30px_0px_#AEAEC04D,_-10px_-10px_30px_0px_#FFFFFF] rounded-xl flex flex-col py-4 px-6 font-dm-sans mb-[2vh]">
         <h1 className="text-[#002E5B] font-dm-sans font-bold text-center pt-[4vh] text-[1.5rem] mb-4">
           Profile
         </h1>

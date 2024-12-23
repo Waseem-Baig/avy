@@ -41,10 +41,10 @@ const DashBoardM = () => {
   };
 
   return (
-    <div className="flex bg-[#EEF5FC] p-4 flex-col justify-center items-center gap-[5vh] w-[100vw] h-auto">
+    <div className="flex bg-[#EEF5FC] p-4 flex-col justify-center items-center gap-[3vh] w-[100vw] h-auto">
       <LogoLogout />
       <MobileNavbar />
-      <div className="flex flex-col gap-[5vh] px-2">
+      <div className="flex flex-col gap-[3vh] px-2">
         {/* Parent Container */}
         <div className="bg-[#EEF5FC] relative w-[85vw] h-[auto] shadow-[inset_10px_10px_20px_#fff,_inset_-10px_-10px_20px_#AEAEC04D] rounded-xl flex flex-col gap-[3vh] p-4 pb-[7vh]">
           {/* Heading */}
@@ -87,7 +87,7 @@ const DashBoardM = () => {
             </button>
           </div>
         </div>
-        <div className="bg-[#EEF5FC] relative w-[85vw] h-[auto] shadow-[inset_10px_10px_20px_#fff,_inset_-10px_-10px_20px_#AEAEC04D] rounded-lg border-#D4E5F6 border-[1px] border-solid box-border flex flex-col justify-center items-center gap-[4vh] py-[7vh] mb-[4vh]">
+        <div className="bg-[#EEF5FC] relative w-[85vw] h-[auto] shadow-[inset_10px_10px_20px_#fff,_inset_-10px_-10px_20px_#AEAEC04D] rounded-lg border-#D4E5F6 border-[1px] border-solid box-border flex flex-col justify-center items-center gap-[4vh] py-[7vh] mb-[3vh]">
           <div className="flex gap-[5vw]">
             <button onClick={() => handleCard2Click(0)}>
               <MobileCard2
