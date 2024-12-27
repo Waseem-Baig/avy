@@ -41,9 +41,9 @@ const DashBoardM = () => {
   };
 
   return (
-    <div className="flex flex-col gap-[3vh] w-full h-auto items-center justify-center px-4">
+    <div className="flex flex-col gap-[3vh] w-full h-auto items-center justify-center">
       {/* Parent Container */}
-      <div className="bg-[#EEF5FC] relative w-[full] h-[auto] shadow-[inset_10px_10px_20px_#fff,_inset_-10px_-10px_20px_#AEAEC04D] rounded-xl flex flex-col gap-[3vh] p-4 pb-[7vh]">
+      <div className="bg-[#EEF5FC] relative w-[92vw] h-[auto] shadow-[inset_10px_10px_20px_#fff,_inset_-10px_-10px_20px_#AEAEC04D] rounded-xl flex flex-col gap-[3vh] p-4 pb-[7vh]">
         {/* Heading */}
         <h1 className="text-[#002E5B] font-dm-sans font-bold text-center pt-[3vh] text-[1.5rem]">
           Track your devices
@@ -84,7 +84,7 @@ const DashBoardM = () => {
           </button>
         </div>
       </div>
-      <div className="bg-[#EEF5FC] relative w-full h-[auto] shadow-[inset_10px_10px_20px_#fff,_inset_-10px_-10px_20px_#AEAEC04D] rounded-lg border-#D4E5F6 border-[1px] border-solid box-border flex flex-col justify-center items-center gap-[4vh] py-[7vh] mb-[3vh]">
+      <div className="bg-[#EEF5FC] relative w-[92vw] h-[auto] shadow-[inset_10px_10px_20px_#fff,_inset_-10px_-10px_20px_#AEAEC04D] rounded-lg border-#D4E5F6 border-[1px] border-solid box-border flex flex-col justify-center items-center gap-[4vh] py-[7vh] px-4 mb-[3vh]">
         <div className="flex gap-[5vw]">
           <button onClick={() => handleCard2Click(0)}>
             <MobileCard2

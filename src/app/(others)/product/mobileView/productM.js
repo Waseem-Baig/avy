@@ -41,7 +41,7 @@ const ProductM = () => {
 
   return (
     <div className="flex flex-col justify-center items-center w-full pt-1 px-4 gap-[5vh] mb-[5vh]">
-      <div className="flex justify-center items-center w-full h-[27vh] rounded-lg bg-[#EEF5FC] shadow-[inset_-10px_-10px_10px_0px_#AEAEC040,_inset_10px_10px_10px_0px_#FFFFFF,_10px_10px_30px_0px_#AEAEC04D,_-10px_-10px_30px_0px_#FFFFFF]">
+      <div className="flex justify-center items-center w-[92vw] h-[27vh] rounded-lg bg-[#EEF5FC] shadow-[inset_-10px_-10px_10px_0px_#AEAEC040,_inset_10px_10px_10px_0px_#FFFFFF,_10px_10px_30px_0px_#AEAEC04D,_-10px_-10px_30px_0px_#FFFFFF]">
         <div className="flex flex-col justify-center items-center gap-3">
           <h2 className="font-sans font-semibold text-[1.7rem] text-[#002E5B]">
             Devices
@@ -75,7 +75,7 @@ const ProductM = () => {
         </div>
       </div>
 
-      <div className="flex flex-col justify-center items-center gap-3 w-[90%]">
+      <div className="flex flex-col justify-center items-center gap-3 w-[95%]">
         <div className="flex justify-between items-center pl-[5vw] pr-[5vw] w-full">
           <h2 className="font-sans font-bold text-[24px] text-black">
             Devices
