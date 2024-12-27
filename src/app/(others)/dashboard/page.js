@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import DashBoardMobile from "./mobileView/dashboardMobile";
 import DashBoardDesktop from "./desktopView/page";
+import DashBoardMobile from "./mobileView/page";
 
 const DashBoardWrapper = () => {
   const [isMobile, setIsMobile] = useState(false);
