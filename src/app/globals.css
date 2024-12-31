@@ -28,3 +28,21 @@ body {
 .card2-hover {
   box-shadow: 8px 8px 0px 0px #b8cce0, -8px -8px 0px 0px #fff;
 }
+
+@layer utilities {
+  .scrollbar-custom {
+    @apply overflow-auto; /* Enable scrolling */
+  }
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 4px; /* Thin scrollbar */
+  }
+  .scrollbar-custom::-webkit-scrollbar-track {
+    @apply bg-gray-200; /* Track color */
+  }
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    @apply bg-gray-500 rounded-full; /* Thumb color and rounded edges */
+  }
+  .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-700; /* Thumb color on hover */
+  }
+}

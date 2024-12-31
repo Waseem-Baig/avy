@@ -1,9 +1,9 @@
 import React from "react";
 
-const Frame = ({ onClose }) => {
+const TimeLine = ({ onClose }) => {
   return (
     <div
-      className="flex flex-col gap-2 w-[30vw] relative rounded-lg bg-[#F6F6F6] h-auto text-center text-[20px] text-black font-source-sans-pro shadow-lg px-6 py-4"
+      className="flex flex-col gap-2 w-96 relative rounded-lg bg-white h-auto text-center text-[20px] text-black font-source-sans-pro shadow-lg px-6 py-4 z-50"
       onClick={(e) => e.stopPropagation()} // Prevent closing when clicking on the popup
     >
       <div className="w-full text-[20px] underline leading-[100%] font-semibold font-source-sans-pro text-black text-start flex justify-between items-center">
@@ -33,7 +33,7 @@ const Frame = ({ onClose }) => {
       </div>
       <div className="flex w-full justify-center items-center mt-2">
         <button
-          className="bg-[#007AFF] text-white p-2 text-[1rem] rounded-md"
+          className="bg-gradient-to-b from-[#FFCC99] to-[#E37302] text-white py-2 px-4 hover:bg-orange-600 transition p-2 text-[1rem] rounded-md font-bold"
           onClick={(e) => e.stopPropagation()} // Prevent closing when clicking on the button
         >
           Apply Changes
@@ -45,22 +45,19 @@ const Frame = ({ onClose }) => {
 
 const LabelledInput = ({ label, type }) => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col gap-2">
       <label className="font-source-sans-pro text-base font-normal text-left">
         {label}
       </label>
-      <div className="flex justify-between">
-        <div className="flex items-center gap-2 bg-[#D9D9D9] p-2 rounded-lg w-[12vw] justify-between">
-          <input
-            type={type}
-            className="text-[15px] font-source-sans bg-transparent focus:outline-none"
-            style={{ width: "100%" }}
-            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking on the input
-          />
-        </div>
-      </div>
+      <label className="flex items-center gap-2 bg-[#F6FAFD] p-2 rounded-md w-40 cursor-pointer border-t-[3px] border-l-[3px] border-b-[1px] border-r-[1px] shadow-[inset_-5px_-5px_13px_0px_#FFFFFF,_inset_3px_3px_13px_0px_#DFD6D199]">
+        <input
+          type={type}
+          className="text-[15px] font-source-sans bg-transparent focus:outline-none w-full"
+          onClick={(e) => e.stopPropagation()} // Prevents unintended propagation
+        />
+      </label>
     </div>
   );
 };
 
-export default Frame;
+export default TimeLine;

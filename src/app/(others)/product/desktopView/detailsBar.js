@@ -1,6 +1,14 @@
+"use client";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const Details = ({ data }) => {
+  const router = useRouter();
+
+  const handleTrack = () => {
+    router.push("/mainPage");
+  };
+
   return (
     <div className="flex justify-center items-center w-[100%] h-[10vh] rounded-lg bg-[#F8FEFF] shadow-[inset_-10px_-10px_10px_0px_#AEAEC040,_inset_10px_10px_10px_0px_#FFFFFF,_10px_10px_30px_0px_#AEAEC04D,_-10px_-10px_30px_0px_#FFFFFF]">
       <div className="flex items-center w-full pl-[3vw] pr-[3vw] justify-between">
@@ -26,7 +34,10 @@ const Details = ({ data }) => {
           </p>
         </div>
         <div className="flex gap-[2vw]">
-          <button className="text-[14px] font-poppins font-semibold border-[1px] border-[#EA8826] text-[#080D0B] py-2 px-4 rounded-lg">
+          <button
+            className="text-[14px] font-poppins font-semibold border-[1px] border-[#EA8826] text-[#080D0B] py-2 px-4 rounded-lg"
+            onClick={handleTrack}
+          >
             Track
           </button>
           <button className="text-[14px] font-poppins font-semibold border-[1px] border-[#267CD1] text-[#080D0B] py-2 px-4 rounded-lg">
