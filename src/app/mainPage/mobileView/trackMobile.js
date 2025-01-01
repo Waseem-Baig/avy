@@ -16,7 +16,7 @@ const TrackM = () => {
   const [showTimeLine, setShowTimeLine] = useState(false);
   const [openUserId, setOpenUserId] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 4; // Number of items per page
+  const itemsPerPage = 5; // Number of items per page
 
   const filteredData = userData.filter((user) => {
     if (current === 2) return user.status === "Active"; // Online
@@ -87,6 +87,7 @@ const TrackM = () => {
           onToggle={() => handleToggle(data.registration_number)}
           showTimeLine={showTimeLine}
           handleTimeLine={handleTimeLine}
+          width={"w-[100%]"}
         />
       ));
   };
@@ -94,19 +95,19 @@ const TrackM = () => {
   return (
     <div className="flex flex-col justify-center items-center w-full px-4 font-poppins text-black gap-[3vh]">
       <div className="flex justify-between w-full">
-        <button className="flex justify-center items-center bg-gradient-to-b from-[#FFFFFF] to-[#DCEEFF] rounded-lg cursor-pointer transition-all card2-shadow w-20 h-20">
+        <button className="flex justify-center items-center bg-gradient-to-b from-[#FFFFFF] to-[#DCEEFF] rounded-lg cursor-pointer transition-all card2-shadow w-24 h-20">
           <div className="flex flex-col gap-1 items-center justify-center">
             <Image alt="w" src="/svgs/refresh.svg" width={20} height={20} />
             <p className="text-[10px]">Refresh</p>
           </div>
         </button>
-        <button className="flex justify-center items-center bg-gradient-to-b from-[#FFFFFF] to-[#DCEEFF] rounded-lg cursor-pointer transition-all card2-shadow w-20 h-20">
+        <button className="flex justify-center items-center bg-gradient-to-b from-[#FFFFFF] to-[#DCEEFF] rounded-lg cursor-pointer transition-all card2-shadow w-24 h-20">
           <div className="flex flex-col gap-1 items-center justify-center">
             <Image alt="w" src="/svgs/timeline.svg" width={20} height={20} />
             <p className="text-[10px]">TimeLine</p>
           </div>
         </button>
-        <button className="flex justify-center items-center bg-gradient-to-b from-[#FFFFFF] to-[#DCEEFF] rounded-lg cursor-pointer transition-all card2-shadow w-20 h-20">
+        <button className="flex justify-center items-center bg-gradient-to-b from-[#FFFFFF] to-[#DCEEFF] rounded-lg cursor-pointer transition-all card2-shadow w-24 h-20">
           <div className="flex flex-col gap-1 items-center justify-center">
             <Image
               alt="w"
@@ -117,7 +118,7 @@ const TrackM = () => {
             <p className="text-[10px]">Google</p>
           </div>
         </button>
-        <button className="flex justify-center items-center bg-gradient-to-b from-[#FFFFFF] to-[#DCEEFF] rounded-lg cursor-pointer transition-all card2-shadow w-20 h-20">
+        <button className="flex justify-center items-center bg-gradient-to-b from-[#FFFFFF] to-[#DCEEFF] rounded-lg cursor-pointer transition-all card2-shadow w-24 h-20">
           <div className="flex flex-col gap-1 items-center justify-center">
             <Image alt="w" src="/svgs/share.svg" width={20} height={20} />
             <p className="text-[10px]">share</p>
@@ -170,22 +171,26 @@ const TrackM = () => {
           />
         </button>
       </div>
-      <div className="w-full">
-        <TrackAll
-          data={userData}
-          current={current}
-          handleCurrent={handleCurrent}
-          width={"w-[27.5vw]"}
-        />
+
+      <div className="flex flex-col">
+        <div className="w-full">
+          <TrackAll
+            data={userData}
+            current={current}
+            handleCurrent={handleCurrent}
+            width={"w-[27.5vw]"}
+          />
+        </div>
+
+        <div className="flex flex-col gap-2 justify-start items-center w-[100%]">
+          {current === 1 && renderUserInfo(() => true)}
+          {current === 2 && renderUserInfo((user) => user.status === "Active")}
+          {current === 3 &&
+            renderUserInfo((user) => user.status === "Inactive")}
+        </div>
       </div>
 
-      <div className="flex flex-col gap-2 justify-start items-center w-[100%]">
-        {current === 1 && renderUserInfo(() => true)}
-        {current === 2 && renderUserInfo((user) => user.status === "Active")}
-        {current === 3 && renderUserInfo((user) => user.status === "Inactive")}
-      </div>
-
-      <div className="flex justify-center items-center gap-4 mt-4">
+      <div className="flex justify-center items-center gap-4 mt-2 mb-4">
         {/* Left Arrow */}
         <button
           className={`w-[10vw] h-[5vh] shadow-[inset_10px_10px_30px_#fff,_inset_-10px_-10px_30px_#AEAEC04D] rounded-md bg-[#F8FEFF] border-#D4E5F6 border-[1px] text-black ${

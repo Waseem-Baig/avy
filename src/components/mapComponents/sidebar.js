@@ -65,6 +65,7 @@ const Sidebar = ({ showTimeLine, handleTimeLine }) => {
           isOpen={openUserId === data.registration_number}
           onToggle={() => handleToggle(data.registration_number)}
           handleTimeLine={handleTimeLine}
+          width={"w-[95%]"}
         />
       ));
   };

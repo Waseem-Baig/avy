@@ -20,7 +20,7 @@ const TrackAll = ({ data, current, handleCurrent, width }) => {
   ];
 
   return (
-    <div className="flex gap-5">
+    <div className="flex justify-between items-center w-[100%]">
       <div className="flex gap-4">
         {buttons.map((button) => (
           <div
