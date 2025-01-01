@@ -3,7 +3,7 @@ import Image from "next/image";
 import TimeLine from "./timeLine";
 import "/src/app/globals.css";
 
-const UserInfo = ({ data, isOpen, onToggle, showTimeLine, handleTimeLine }) => {
+const UserInfo = ({ data, isOpen, onToggle, handleTimeLine }) => {
   // Define classes based on state to keep things clear
   const containerClass = isOpen
     ? "cursor-default border-t-[1px] border-l-[1px] bg-gradient-to-br from-[#FCBB8440] to-[#FFFFFF] border-[#FCBB84] shadow-[inset_10px_10px_20px_#fff,_inset_-10px_-10px_20px_#AEAEC04D]"
@@ -11,7 +11,7 @@ const UserInfo = ({ data, isOpen, onToggle, showTimeLine, handleTimeLine }) => {
 
   return (
     <div
-      className={`relative w-[95%] rounded-lg ${containerClass}`}
+      className={`relative w-[95%] rounded-lg ${containerClass} font-poppins`}
       onClick={onToggle}
     >
       {/* Background Overlay */}

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-const TrackAll = ({ data, current, handleCurrent }) => {
+const TrackAll = ({ data, current, handleCurrent, width }) => {
   const [userData, setUserData] = useState(data);
 
   // Count total, active, and inactive users
@@ -20,7 +20,7 @@ const TrackAll = ({ data, current, handleCurrent }) => {
   ];
 
   return (
-    <div className="flex gap-5 pt-2 pl-3">
+    <div className="flex gap-5">
       <div className="flex gap-4">
         {buttons.map((button) => (
           <div
@@ -28,15 +28,15 @@ const TrackAll = ({ data, current, handleCurrent }) => {
             className="flex flex-col justify-start items-center"
           >
             <button
-              className={`w-24 py-2 px-4 ${
+              className={`${width} py-2 px-4 ${
                 current === button.id &&
                 `bg-gradient-to-b from-[#FFCC99] to-[#E37302] text-white hover:bg-orange-600 transition border-none`
-              } font-source-sans text-[0.7rem] text-center rounded-lg border-[0.2px] border-[#5C75F4] bg-[#F4F4F4] shadow-md shadow-[rgba(0,0,0,0.25)] font-bold
+              } font-source-sans text-[0.8rem] text-center rounded-lg border-[0.2px] border-[#5C75F4] bg-[#F4F4F4] shadow-md shadow-[rgba(0,0,0,0.25)] font-bold
               ${current !== button.id && `bg-[#F4F4F4] text-black`}`}
               onClick={() => handleCurrent(button.id)}
             >
               {button.label}
-              <span className="font-bold text-sm">({button.count})</span>
+              <span className="font-bold text-md">({button.count})</span>
             </button>
             {current === button.id && (
               <svg

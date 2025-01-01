@@ -96,7 +96,7 @@ export default function SignUp() {
             <input
               type={showPassword ? "text" : "password"}
               id="confirm-password"
-              className="w-[22vw] p-[7px] border rounded shadow-[inset_-5px_-5px_13px_0px_#FFFFFF,_inset_3px_3px_13px_0px_#DFD6D199] placeholder:text-[#9E9E9E] placeholder:text-[12px] text-black"
+              className="w-[22vw] p-[7px] border rounded-md shadow-[inset_-5px_-5px_13px_0px_#FFFFFF,_inset_3px_3px_13px_0px_#DFD6D199] placeholder:text-[#9E9E9E] placeholder:text-[12px] text-black"
               placeholder="Enter your password"
             />
           </div>

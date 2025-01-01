@@ -64,7 +64,6 @@ const Sidebar = ({ showTimeLine, handleTimeLine }) => {
           data={data}
           isOpen={openUserId === data.registration_number}
           onToggle={() => handleToggle(data.registration_number)}
-          showTimeLine={showTimeLine}
           handleTimeLine={handleTimeLine}
         />
       ));
@@ -196,11 +195,15 @@ const Sidebar = ({ showTimeLine, handleTimeLine }) => {
               </button>
             </div>
 
-            <TrackAll
-              data={userData}
-              current={current}
-              handleCurrent={handleCurrent}
-            />
+            <div className="pl-3 pt-2 w-[full]">
+              <TrackAll
+                data={userData}
+                current={current}
+                handleCurrent={handleCurrent}
+                width={"w-24"}
+              />
+            </div>
+
             <div className="flex flex-col gap-2 justify-start items-center h-[52vh] overflow-y-scroll scrollbar-custom">
               {current === 1 && renderUserInfo(() => true)}
               {current === 2 &&
